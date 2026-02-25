@@ -1,7 +1,8 @@
-   @font-face {
-    font-family: 'Michroma';
-    src: url('./fonts/Michroma/Michroma-Regular.ttf');
+@font-face {
+  font-family: 'Michroma';
+  src: url('./fonts/Michroma/Michroma-Regular.ttf');
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -9,51 +10,50 @@
   font-family: 'Michroma';
 }
 
-  body {background: #05010c;
+body {
+  background: #05010c;
   color: white;
-  font-family:'michroma',sans-serif;
+  font-family: 'michroma', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  overflow-x :hidden;
-  background:linear-gradient(180deg, #05010c 0%, #1a0a33 40%);
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #05010c 0%, #1a0a33 40%);
 }
 
-header{
-    width: 70%;
-    max-width: 1200px;
+header {
+  width: 70%;
+  max-width: 1200px;
 }
 
-  .navbar {
-  display:flex;
+.navbar {
+  display: flex;
   justify-content: space-between;
   padding: 17px 60px;
-  align-items:center;
-  
- 
+  align-items: center;
 }
 
-.logo{top:40px;
-width:132px;
-height:40px;
-left: 107px;
-gap: 12px;
-
+.logo {
+  top: 40px;
+  width: 132px;
+  height: 40px;
+  left: 107px;
+  gap: 12px;
 }
-
 
 .navbar nav a {
-margin: 0 15px;
-text-decoration: none;
-color: #ccc;
-height: 46px;
-top:32px;
-left: 695px;
-gap: 46px;}
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ccc;
+  height: 46px;
+  top: 32px;
+  left: 695px;
+  gap: 46px;
+}
 
-  .btn {
+.btn {
   background: #6a00ff;
   border: none;
   padding: 10px 18px;
@@ -62,78 +62,81 @@ gap: 46px;}
   cursor: pointer;
 }
 
-.img-cont{position:relative;
+.img-cont {
+  position: relative;
 }
 
-.image1{
-width: 272px;
-height: 88px;
-top: 50px;
-left: 50px;
-gap:12px;
-position: absolute;
-border-radius: 20px;
+.image1 {
+  width: 272px;
+  height: 88px;
+  top: 50px;
+  left: 50px;
+  gap: 12px;
+  position: absolute;
+  border-radius: 20px;
 }
 
-.image2{width: 1080px;
-height:436px;
-top:116px;
-left:98px;
-border:1px;
-border-radius:20px;}
-
-.overlay-text{
-    position:absolute;
-    top: 40%;
-    left: 5%;
-    font: weight 600;
-    font-size: 40px;
-    font-style: regular;
-    letter-spacing: 0%;
-    line-height: 100%;
-    width: 750px;
+.image2 {
+  width: 1080px;
+  height: 436px;
+  top: 116px;
+  left: 98px;
+  border: 1px;
+  border-radius: 20px;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
+.overlay-text {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  font: weight 600;
+  font-size: 40px;
+  font-style: regular;
+  letter-spacing: 0%;
+  line-height: 100%;
+  width: 750px;
 }
 
-.rev1{
-    width: 941px;
-    height: 899px;
-    top: 7px;
-    left: 169px;
-    margin-top: 60px;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }
 
-.easy-pay{
-    width: 1050px;
-    height: 376px;
-    top: 1651px;
-    left: 102px;
-    gap: 17px;
+.rev1 {
+  width: 941px;
+  height: 899px;
+  top: 7px;
+  left: 169px;
+  margin-top: 60px;
 }
 
-.form{
-    border: 1px dotted #7114E3;
-    width: 1039px;
-    height: 418px;
-    left: 122px;
-    top: 2165px;
-    right: 12px;
-    bottom: 24px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.easy-pay {
+  width: 1050px;
+  height: 376px;
+  top: 1651px;
+  left: 102px;
+  gap: 17px;
 }
 
-.waitlist{
+.form {
+  border: 1px dotted #7114E3;
+  width: 1039px;
+  height: 418px;
+  left: 122px;
+  top: 2165px;
+  right: 12px;
+  bottom: 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.waitlist {
   background: #6a00ff;
   border: none;
   padding: 10px 18px;
@@ -146,18 +149,22 @@ main{
   right: 40%;
 }
 
-.sign input{padding:15px;
-width: 700px;
-border:1px dotted #7114E3;
-background:#05010c;
-color: white;
+.sign input {
+  padding: 15px;
+  width: 700px;
+  border: 1px dotted #7114E3;
+  background: #05010c;
+  color: white;
 }
-.sign button{padding: 15px;
-background: #6a00ff;
-color: #ccc;
-width: 700px;}
 
-footer{
+.sign button {
+  padding: 15px;
+  background: #6a00ff;
+  color: #ccc;
+  width: 700px;
+}
+
+footer {
   border: 1px dotted #7114E3;
   width: 1088px;
   left: 46px;
@@ -174,26 +181,26 @@ footer{
   margin-bottom: 80px;
 }
 
-footer a{
+footer a {
   color: white;
   text-decoration: none;
 }
 
-.telegram{
+.telegram {
   background: white;
   color: #05010c;
   padding: 5px 18px;
   width: 130px;
   border-radius: 4px;
-  
 }
 
-.twitter{
+.twitter {
   background: white;
   color: #05010c;
   padding: 5px 18px;
   width: 130px;
-border-radius: 4px;}
+  border-radius: 4px;
+}
 
 @media (max-width: 768px) {
 
@@ -203,7 +210,7 @@ border-radius: 4px;}
     overflow-x: hidden;
   }
 
-  html{
+  html {
     max-width: 100vw;
     overflow-x: hidden;
   }
@@ -212,7 +219,7 @@ border-radius: 4px;}
     width: 100%;
   }
 
-.navbar {
+  .navbar {
     width: 100%;
     padding: 10px 14px;
     display: flex;
@@ -228,25 +235,25 @@ border-radius: 4px;}
     flex-shrink: 0;
   }
 
-   .navbar {
-    flex-wrap: wrap;          /* allows items to wrap instead of overflowing */
-    padding: 10px 15px;       /* smaller padding for mobile */
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 15px;
     gap: 10px;
   }
 
   .navbar nav {
     display: flex;
-    flex-wrap: wrap;          /* wrap links and button if needed */
-    justify-content: flex-end; /* push button to the right */
+    flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 10px;
   }
 
   .btn {
-    flex-shrink: 0;           /* prevent shrinking too much */
-    padding: 6px 10px;        /* smaller on mobile */
+    flex-shrink: 0;
+    padding: 6px 10px;
     font-size: 0.7rem;
     border-radius: 14px;
-    width: auto;              /* let it fit content */
+    width: auto;
   }
 
   .hero {
@@ -264,7 +271,7 @@ border-radius: 4px;}
   }
 
   .image1 {
-    position: static;      
+    position: static;
     width: 45vw;
     height: auto;
   }
@@ -277,7 +284,7 @@ border-radius: 4px;}
   }
 
   .overlay-text {
-    position: static;      
+    position: static;
     width: 90%;
     font-size: 1.4rem;
     text-align: left;
@@ -290,18 +297,18 @@ border-radius: 4px;}
   }
 
   .rev1 {
-    width: 90vw;          
+    width: 90vw;
     height: auto;
     margin-top: 40px;
   }
 
   .easy-pay {
-    width: 90vw;          
+    width: 90vw;
     height: auto;
   }
 
   .form {
-    width: 90vw;          
+    width: 90vw;
     height: auto;
     padding: 30px 15px;
     gap: 20px;
@@ -314,11 +321,11 @@ border-radius: 4px;}
 
   .sign input,
   .sign button {
-    width: 100%;          
+    width: 100%;
   }
 
   footer {
-    width: 90vw;          
+    width: 90vw;
     height: auto;
     flex-direction: column;
     gap: 15px;
@@ -344,3 +351,85 @@ border-radius: 4px;}
 .rev1 {
   animation: spin 20s linear infinite;
 }
+
+.faq-section {
+  max-width: 1075px;
+  width: 90%;
+}
+
+.faq-section h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.accordion-item {
+  background: #05010c;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.accordion-item input {
+  display: none;
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  background: #05010c;
+  transition: background 0.3s ease;
+}
+
+.accordion-title:hover {
+  background: #7114E3;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #0d0d0d;
+}
+
+.accordion-content p {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.accordion-item input:checked ~ .accordion-content {
+  max-height: 200px;
+}
+
+.accordion-item input:checked ~ .accordion-title .icon {
+  transform: rotate(-135deg);
+}
+
+#waitlistMsg {
+  min-height: 18px;
+  color: #ccc;
+}
+
+#waitlistMsg.success { 
+  color: #4cff88; 
+}
+
+#waitlistMsg.error {
+   color: #ff6b6b; 
+  }
