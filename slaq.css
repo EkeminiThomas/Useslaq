@@ -345,7 +345,7 @@ footer a {
   /* Logo stays on top-left of the card */
   .image1 {
     position: absolute;
-    top: 14px;
+    top: 9px;
     left: 14px;
     width: 140px;
     height: auto;
@@ -356,7 +356,7 @@ footer a {
   position: absolute;
   left: 14px;
   right: 14px;
-  top: 63%; /* moved slightly down */
+  top: 58%; /* moved slightly down */
   transform: translateY(-50%);
   font-size: clamp(18px, 4.2vw, 28px);
   line-height: 1.3;
