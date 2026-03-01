@@ -352,19 +352,18 @@ footer a {
     z-index: 2;
   }
 
-  /* Text stays inside the card, left-aligned like desktop */
   .overlay-text {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: clamp(18px, 4.2vw, 28px);
-    line-height: 1.2;
-    text-align: left;
-    z-index: 2;
-    max-width: 90%;
-  }
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 58%; /* moved slightly down */
+  transform: translateY(-50%);
+  font-size: clamp(18px, 4.2vw, 28px);
+  line-height: 1.3;
+  text-align: left;
+  z-index: 2;
+  max-width: 90%;
+}
 
   .waitlist {
   margin-bottom: 30px;
