@@ -10,6 +10,10 @@
   font-family: 'Michroma';
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: #05010c;
   color: white;
@@ -23,16 +27,28 @@ body {
   background: linear-gradient(180deg, #05010c 0%, #1a0a33 40%);
 }
 
+/* ===== Layout width safety ===== */
 header {
   width: 70%;
   max-width: 1200px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 17px 60px;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
@@ -53,6 +69,7 @@ header {
   gap: 46px;
 }
 
+/* btn is used as <a class="btn"> in your HTML */
 .btn {
   background: #6a00ff;
   border: none;
@@ -60,17 +77,30 @@ header {
   border-radius: 20px;
   color: white;
   cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .img-cont {
   position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
 }
 
 .image1 {
   width: 272px;
   height: 88px;
   top: 50px;
-  left: 50px;
+  left: 90px;
   gap: 12px;
   position: absolute;
   border-radius: 20px;
@@ -78,52 +108,72 @@ header {
 
 .image2 {
   width: 1080px;
-  height: 436px;
+  max-width: 100%;
+  height: auto;
   top: 116px;
   left: 98px;
   border: 1px;
   border-radius: 20px;
+  display: block;
 }
 
 .overlay-text {
   position: absolute;
   top: 40%;
-  left: 5%;
+  left: 8%;
   font: weight 600;
   font-size: 40px;
   font-style: regular;
   letter-spacing: 0%;
   line-height: 100%;
   width: 750px;
+  max-width: 90%;
 }
 
-main {
+/* ===== REV SPIN IMAGE ===== */
+.rev {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 60px;
 }
 
 .rev1 {
   width: 941px;
-  height: 899px;
+  max-width: 100%;
+  height: auto;
   top: 7px;
   left: 169px;
   margin-top: 60px;
+  display: block;
+}
+
+/* ===== PAY EASY SECTION ===== */
+.pay-easy {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pay-easy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .easy-pay {
   width: 1050px;
-  height: 376px;
-  top: 1651px;
-  left: 102px;
-  gap: 17px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
+/* ===== WAITLIST FORM ===== */
 .form {
   border: 1px dotted #7114E3;
   width: 1039px;
+  max-width: 90vw;
   height: 418px;
   left: 122px;
   top: 2165px;
@@ -152,6 +202,7 @@ main {
 .sign input {
   padding: 15px;
   width: 700px;
+  max-width: 90vw;
   border: 1px dotted #7114E3;
   background: #05010c;
   color: white;
@@ -162,11 +213,14 @@ main {
   background: #6a00ff;
   color: #ccc;
   width: 700px;
+  max-width: 90vw;
 }
 
+/* ===== FOOTER ===== */
 footer {
   border: 1px dotted #7114E3;
   width: 1088px;
+  max-width: 90vw;
   left: 46px;
   top: 2694px;
   height: 196px;
@@ -202,16 +256,33 @@ footer a {
   border-radius: 4px;
 }
 
-@media (max-width: 768px) {
+/* ===== Tablet / Medium Screens Fix ===== */
+@media (max-width: 1024px) {
+  header {
+    width: 92%;
+  }
 
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .overlay-text {
+    font-size: 32px;
+    width: min(750px, 90%);
+  }
+
+  .waitlist {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
   body {
     align-items: stretch;
     gap: 20px;
-    overflow-x: hidden;
-  }
-
-  html {
-    max-width: 100vw;
     overflow-x: hidden;
   }
 
@@ -226,6 +297,7 @@ footer a {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .logo {
@@ -233,12 +305,6 @@ footer a {
     max-width: 120px;
     height: auto;
     flex-shrink: 0;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-    padding: 10px 15px;
-    gap: 10px;
   }
 
   .navbar nav {
@@ -322,6 +388,7 @@ footer a {
   .sign input,
   .sign button {
     width: 100%;
+    max-width: 100%;
   }
 
   footer {
@@ -336,9 +403,9 @@ footer a {
   .twitter {
     width: auto;
   }
-
 }
 
+/* ===== Animation ===== */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -352,6 +419,7 @@ footer a {
   animation: spin 20s linear infinite;
 }
 
+/* ===== FAQ ===== */
 .faq-section {
   max-width: 1075px;
   width: 90%;
@@ -421,15 +489,16 @@ footer a {
   transform: rotate(-135deg);
 }
 
+/* ===== Waitlist Message ===== */
 #waitlistMsg {
   min-height: 18px;
   color: #ccc;
 }
 
-#waitlistMsg.success { 
-  color: #4cff88; 
+#waitlistMsg.success {
+  color: #4cff88;
 }
 
 #waitlistMsg.error {
-   color: #ff6b6b; 
-  }
+  color: #ff6b6b;
+}
