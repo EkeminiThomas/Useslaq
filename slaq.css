@@ -345,7 +345,7 @@ footer a {
   /* Logo stays on top-left of the card */
   .image1 {
     position: absolute;
-    top: 9px;
+    top: 5px;
     left: 14px;
     width: 140px;
     height: auto;
