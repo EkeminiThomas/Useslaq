@@ -18,6 +18,20 @@ def get_conn():
         raise RuntimeError("DATABASE_URL missing. Set it in Pxxl environment variables.")
     return psycopg.connect(DATABASE_URL)
 
+    def init_db():
+        with get_conn() as conn:
+            with conn.cursor() as cur:
+                cur.execute("""
+                    CREATE TABLE IF NOT EXISTS waitlist (
+                        id SERIAL PRIMARY KEY,
+                        email TEXT UNIQUE NOT NULL,
+                        source TEXT,
+                        created_at TIMESTAMPTZ DEFAULT now()
+                );
+            """)
+                
+                init_db()
+
 @app.get("/api/health")
 def health():
     return jsonify({"ok": True})
