@@ -9,7 +9,12 @@ load_dotenv()
 app = Flask(__name__)
 
 # Allow your frontend domain (tight CORS)
-CORS(app, resources={r"/api/*": {"origins": ["https://useslaq.com", "http://localhost:5500", "http://127.0.0.1:5500"]}})
+CORS(app, resources={r"/api/*": {"origins": [
+    "https://useslaq.com",
+    "https://slaq-web.pxxl.click",
+    "http://localhost:5500",
+    "http://127.0.0.1:5500",
+]}})
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
