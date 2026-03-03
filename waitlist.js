@@ -16,7 +16,6 @@ function setMessage(text, type) {
 }
 
 function isValidEmail(email) {
-  // Simple “good enough” email check
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
@@ -25,22 +24,19 @@ form.addEventListener("submit", async (e) => {
 
   const email = emailInput.value.trim().toLowerCase();
 
-  // 1) Validate
   if (!email) return setMessage("Please type your email.", "error");
   if (!isValidEmail(email)) return setMessage("That email doesn’t look correct.", "error");
 
-  // 2) UI loading state
   submitBtn.disabled = true;
   submitBtn.textContent = "Joining...";
   setMessage("");
 
   try {
-    // 3) Send to backend
     const res = await fetch(`${API_BASE}/api/waitlist`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, source: "landing-page" }),
-});
+    });
 
     const data = await res.json();
 
@@ -49,7 +45,6 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    // 4) Success
     setMessage(data.message || "Joined successfully!", "success");
     form.reset();
   } catch (err) {
@@ -71,7 +66,7 @@ if (joinBtn) {
       return;
     }
 
-    form.requestSubmit(); // same logic as Signup
+    form.requestSubmit();
   });
 }
 
@@ -80,7 +75,28 @@ const navBtn = document.getElementById("navWaitlistBtn");
 
 if (navBtn) {
   navBtn.addEventListener("click", () => {
-    // wait a little for the scroll to finish, then focus input
     setTimeout(() => emailInput.focus(), 300);
+  });
+}
+
+// ==========================
+// HAMBURGER TOGGLE
+// ==========================
+const hamburger = document.getElementById("hamburgerBtn");
+const navMenu = document.getElementById("navMenu");
+
+/* ✅ FIX: guard against null so it never crashes */
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
+
+// ✅ Close menu after clicking any nav link (mobile friendly)
+if (navMenu) {
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
   });
 }
