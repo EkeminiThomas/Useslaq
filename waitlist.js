@@ -30,7 +30,7 @@ form?.addEventListener("submit", (e) => {
     emailInput?.focus();
     return;
   }
-  setMessage("Opening form...", "success");
+  setMessage("");
 });
 
 // Join Waitlist button triggers submit (same as Signup)
