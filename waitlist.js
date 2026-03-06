@@ -15,16 +15,6 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// ===== Mobile Hamburger Menu =====
-
-const hamburgerBtn = document.getElementById("hamburgerBtn");
-const navMenu = document.getElementById("navMenu");
-
-hamburgerBtn?.addEventListener("click", () => {
-  navMenu?.classList.toggle("open");
-});
-
-
 // Validate only, then allow normal form submit to ProForms
 form?.addEventListener("submit", (e) => {
   const email = (emailInput?.value || "").trim().toLowerCase();
@@ -50,3 +40,12 @@ joinBtn?.addEventListener("click", () => form?.requestSubmit());
 // Navbar button scroll + focus
 const navBtn = document.getElementById("navWaitlistBtn");
 navBtn?.addEventListener("click", () => setTimeout(() => emailInput?.focus(), 300));
+
+// ===== Hamburger Menu =====
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navMenu = document.getElementById("navMenu");
+
+hamburgerBtn?.addEventListener("click", () => {
+  navMenu?.classList.toggle("active");
+});
